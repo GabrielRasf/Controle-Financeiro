@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Controle Financeiro</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Adicionar Transação</h1>
+            <div class="div-form">
+                <form id="formTransacao">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="gasto">Gasto</option>
+                        <option value="ganho">Ganho</option>
+                    </select>
+
+                    <label for="valor">Valor (R$):</label>
+                    <input type="number" id="valor" name="valor" required>
+
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" name="descricao" required>
+
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Saldo Atual</h2>
+            <p id="saldo-atual">R$ 0,00</p>
+        </section>
+
+        <section>
+            <h2>Gráfico de Distribuição</h2>
+        
+            <div id="titulo-graficos">
+                <h3>Gastos</h3>
+                <h3>Ganhos</h3>
+                <h3>Gráfico de Pizza</h3>
+            </div>
+        
+            <div id="div-graficos">
+                <div id="gastos">
+                    <ul id="lista-gastos"></ul>
+                </div>
+                <div id="ganhos">
+                    <ul id="lista-ganhos"></ul>
+                </div>
+                <div id="graficoPizza"></div>
+            </div>
+        </section>
+        
+
+    <script src="script.js"></script>
+</body>
+
+</html>
